@@ -15,8 +15,8 @@ const FunctionComponent = (props) => {
     <div >
       <form>
         <label>
-          Function Component<br/>
-          <input type="text" value={props.message} onChange={(event) => props.updateMessage(event.target.value)}/>
+          Function Component<br />
+          <input type="text" value={props.message} onChange={(event) => props.updateMessage(event.target.value)} />
         </label>
       </form>
     </div>

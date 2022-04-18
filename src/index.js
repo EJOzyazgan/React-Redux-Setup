@@ -4,11 +4,14 @@ import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import FunctionComponent from './FunctionComponent';
 import ClassComponent from './ClassComponent';
+import { PersistGate } from 'redux-persist/integration/react'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store}>
-    <FunctionComponent />
-    <ClassComponent />
+  <Provider store={store}>ß
+    <PersistGate loading={null} persistor={persistor}>
+      <FunctionComponent />
+      <ClassComponent />
+    </PersistGate>
   </Provider>,
 );

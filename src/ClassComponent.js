@@ -20,8 +20,8 @@ class ClassComponent extends React.Component {
       <div >
         <form>
           <label>
-            Class Component<br/>
-            <input type="text" value={this.props.message} onChange={(event) => this.props.updateMessage(event.target.value)}/>
+            Class Component<br />
+            <input type="text" value={this.props.message} onChange={(event) => this.props.updateMessage(event.target.value)} />
           </label>
         </form>
       </div>
