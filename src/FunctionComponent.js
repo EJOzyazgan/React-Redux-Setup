@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
-import * as actions from './redux/dataSlice';
+import { updateMessage } from './redux/dataSlice';
 
 const FunctionComponent = (props) => {
   
