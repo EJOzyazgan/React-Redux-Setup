@@ -1,26 +1,22 @@
 import React from "react";
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux'
 import * as actions from './redux/dataSlice';
 
-const mapStateToProps = (state, ownProps) => ({
-  message: state.message,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  updateMessage: message => dispatch(actions.updateMessage(message)),
-});
-
 const FunctionComponent = (props) => {
+  
+  const message = useSelector((state) => state.message);
+  const dispatch = useDispatch();
+  
   return (
     <div >
       <form>
         <label>
           Function Component<br/>
-          <input type="text" value={props.message} onChange={(event) => props.updateMessage(event.target.value)}/>
+          <input type="text" value={message} onChange={(event) => dispatch(updateMessage(event.target.value))}/>
         </label>
       </form>
     </div>
   );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FunctionComponent);
+export default FunctionComponent;
